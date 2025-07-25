@@ -93,9 +93,9 @@
         "515": {
           "json": {
             "position": {
-              "x": 107.53221130371094,
-              "y": 1.1193369297310234e-14,
-              "z": 181.5287322998047
+              "x": 5.9099860191345215,
+              "y": 3.20833244411671e-14,
+              "z": 148.51077270507812
             },
             "scale": {
               "x": 1,
@@ -130,6 +130,42 @@
               "w": 1
             },
             "parent": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "core::Animator",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBAnimator"
+      },
+      "data": {
+        "0": {
+          "json": {
+            "states": []
+          }
+        },
+        "1": {
+          "json": {
+            "states": []
+          }
+        },
+        "2": {
+          "json": {
+            "states": []
+          }
+        },
+        "515": {
+          "json": {
+            "states": []
+          }
+        },
+        "516": {
+          "json": {
+            "states": []
           }
         }
       }
@@ -197,7 +233,7 @@
         "serializationType": "map"
       },
       "data": {
-        "516": {
+        "0": {
           "json": {
             "gizmo": 3
           }
@@ -3923,7 +3959,7 @@
               },
               {
                 "type": "play_sound",
-                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"loop\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"volume\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}}},\"serializationType\":\"map\"}"
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{\"src\":{\"type\":\"string\",\"serializationType\":\"utf8-string\"},\"loop\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}},\"volume\":{\"type\":\"number\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"number\",\"serializationType\":\"float32\"}},\"global\":{\"type\":\"boolean\",\"serializationType\":\"optional\",\"optionalJsonSchema\":{\"type\":\"boolean\",\"serializationType\":\"boolean\"}}},\"serializationType\":\"map\"}"
               },
               {
                 "type": "stop_sound",
@@ -4072,6 +4108,10 @@
               {
                 "type": "heal_player",
                 "jsonSchema": "{\"type\":\"object\",\"properties\":{\"multiplier\":{\"type\":\"integer\",\"serializationType\":\"int32\"}},\"serializationType\":\"map\"}"
+              },
+              {
+                "type": "claim_airdrop",
+                "jsonSchema": "{\"type\":\"object\",\"properties\":{},\"serializationType\":\"map\"}"
               }
             ]
           }
