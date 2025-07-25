@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://purl.imsglobal.org/spec/ob/v3p0/schema/json/evidence_3p0.json",
+  "title": "Evidence",
+  "description": "A schema for Open Badges 3.0 Evidence objects",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "JSON-LD context array"
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique identifier for the evidence"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "const": "Evidence"
+      },
+      "description": "Type of the object, must include 'Evidence'"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name or title of the evidence"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the evidence"
+    },
+    "narrative": {
+      "type": "string",
+      "description": "Narrative description of the evidence"
+    },
+    "genre": {
+      "type": "string",
+      "description": "Genre or type of the evidence"
+    },
+    "audience": {
+      "type": "string",
+      "description": "Intended audience for the evidence"
+    },
+    "creator": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI identifying the creator"
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Type of the creator"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the creator"
+        }
+      },
+      "required": ["id"],
+      "description": "Creator of the evidence"
+    },
+    "subject": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Subjects or topics related to the evidence"
+    },
+    "educationalLevel": {
+      "type": "string",
+      "description": "Educational level of the evidence"
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the evidence was created"
+    },
+    "dateModified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the evidence was last modified"
+    },
+    "license": {
+      "type": "string",
+      "format": "uri",
+      "description": "License under which the evidence is shared"
+    },
+    "mediaType": {
+      "type": "string",
+      "description": "MIME type of the evidence"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL where the evidence can be accessed"
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI to an image representing the evidence"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the image"
+        }
+      },
+      "required": ["id"],
+      "description": "Image representing the evidence"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI to the attachment"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the attachment"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the attachment"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the attachment"
+          },
+          "mediaType": {
+            "type": "string",
+            "description": "MIME type of the attachment"
+          }
+        },
+        "required": ["id"],
+        "description": "An attachment related to the evidence"
+      },
+      "description": "Attachments related to the evidence"
+    }
+  },
+  "required": ["id", "type"],
+  "additionalProperties": true
+} 

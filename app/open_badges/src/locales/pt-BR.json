@@ -1,0 +1,568 @@
+{
+  "app": {
+    "title": "Protocolo de Emblemas",
+    "shortTitle": "PE"
+  },
+  "navigation": {
+    "home": "Início",
+    "badges": "Emblemas",
+    "users": "Usuários",
+    "dashboard": "Painel",
+    "profile": "Perfil",
+    "docs": "Documentação",
+    "validate": "Validar",
+    "achievements": "Conquistas"
+  },
+  "badges": {
+    "title": "Emblemas",
+    "description": "Gerencie e emita emblemas digitais para sua comunidade",
+    "createButton": "Criar Novo Emblema",
+    "searchPlaceholder": "Pesquisar emblemas...",
+    "noBadges": "Nenhum emblema ainda",
+    "noResults": "Nenhum emblema encontrado",
+    "noResultsDescription": "Tente ajustar sua busca ou filtro para encontrar o que procura.",
+    "createBadge": "Criar Emblema",
+    "viewDetails": "Ver Detalhes",
+    "issuedBy": "Emitido por",
+    "created": "Criado em",
+    "myBadges": "Meus Emblemas",
+    "loadingBadges": "Carregando emblemas...",
+    "refreshBadges": "Atualizar Emblemas",
+    "sortBy": "Ordenar por",
+    "sortNewest": "Mais Recentes",
+    "sortOldest": "Mais Antigos",
+    "sortAlphabetical": "Alfabética",
+    "sortStatus": "Status",
+    "filterStatus": "Filtrar por Status",
+    "filterAll": "Todos",
+    "filterValid": "Válidos",
+    "filterExpired": "Expirados",
+    "filterRevoked": "Revogados",
+    "viewMode": "Modo de Visualização",
+    "gridView": "Grade",
+    "listView": "Lista",
+    "showFilters": "Mostrar Filtros",
+    "hideFilters": "Ocultar Filtros",
+    "downloadBadge": "Baixar Emblema",
+    "shareBadge": "Compartilhar Emblema",
+    "copyLink": "Copiar Link",
+    "linkCopied": "Link copiado!",
+    "verified": "Verificado",
+    "expired": "Expirado",
+    "revoked": "Revogado",
+    "issued": "Emitido",
+    "expires": "Expira",
+    "valid": "Válido",
+    "achievementCredential": "Credencial de Conquista",
+    "didValid": "DID: Válido",
+    "didLegacy": "DID: Formato Legado",
+    "badgeDid": "DID do Emblema",
+    "recipientDid": "DID do Destinatário",
+    "issuerDid": "DID do Emissor",
+    "issuedDate": "Data de Emissão",
+    "expiresDate": "Data de Expiração",
+    "achievementDid": "DID da Conquista",
+    "cryptographicProof": "Prova Criptográfica",
+    "proofType": "Tipo",
+    "proofPurpose": "Propósito",
+    "proofCreated": "Criado",
+    "proof": "Prova",
+    "verifyBadge": "Verificar Emblema",
+    "viewJson": "Ver JSON",
+    "copyTooltip": "Copiar para área de transferência",
+    "achievementName": "Nome da Conquista",
+    "achievementDescription": "Descrição da Conquista",
+    "issue": {
+      "backToAchievements": "Voltar para Conquistas",
+      "achievementDetails": "Detalhes da Conquista",
+      "reviewAchievement": "Revise a conquista que você está prestes a emitir",
+      "criteria": "Critérios",
+      "issueCredential": "Emitir Credencial",
+      "chooseSubjectMethod": "Escolha o método de identificação do destinatário e forneça os detalhes do destinatário",
+      "subjectIdentificationMethod": "Método de Identificação do Destinatário",
+      "subjectMethodDescription": "Escolha como o destinatário será identificado na credencial do emblema",
+      "simpleAddress": "Endereço Simples",
+      "simpleAddressDescription": "Use o endereço Solana diretamente como identificador do destinatário. Mais simples e eficiente para casos de uso básicos.",
+      "simpleFeatures": {
+        "noDid": "Não requer criação de DID",
+        "lowerCosts": "Custos de transação menores"
+      },
+      "didBasedIdentification": "Identificação Baseada em DID",
+      "didBasedDescription": "Crie ou use um documento DID existente para o destinatário. Melhor para identidade descentralizada e verificação aprimorada.",
+      "didFeatures": {
+        "verification": "Verificação aprimorada",
+        "decentralizedIdentity": "Identidade descentralizada"
+      },
+      "recipientAddress": "Endereço do Destinatário",
+      "recipientAddressRequired": "Endereço do Destinatário *",
+      "recipientAddressPlaceholder": "Digite o endereço da carteira do destinatário",
+      "simpleMethodNote": "Método Simples: A credencial será emitida diretamente para o endereço da carteira.",
+      "additionalNotes": "Notas Adicionais (Opcional)",
+      "additionalNotesPlaceholder": "Adicione qualquer informação adicional sobre esta emissão de credencial...",
+      "simpleMethodDescription": "Método Simples: Emite a credencial diretamente para o endereço da carteira do destinatário. Esta é a abordagem mais eficiente e funciona com qualquer carteira Solana.",
+      "issueCredentialButton": "Emitir Credencial"
+    }
+  },
+  "users": {
+    "title": "Usuários",
+    "description": "Gerencie usuários e suas atribuições de emblemas",
+    "inviteButton": "Convidar Usuário",
+    "searchPlaceholder": "Pesquisar usuários...",
+    "noUsers": "Nenhum usuário ainda",
+    "noResults": "Nenhum usuário encontrado",
+    "noResultsDescription": "Tente ajustar sua busca ou filtro para encontrar o que procura.",
+    "getStartedDescription": "Comece convidando seu primeiro usuário.",
+    "inviteUser": "Convidar Usuário",
+    "viewProfile": "Ver Perfil",
+    "badgesCount": "{count} Emblema | {count} Emblemas",
+    "joined": "Entrou em"
+  },
+  "theme": {
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "home": {
+    "badge": "Agora com integração de Carteira Solana",
+    "title": "Bem-vindo ao Protocolo de Emblemas",
+    "subtitle": "Emita, gerencie e verifique credenciais digitais na blockchain Solana",
+    "getStarted": "Começar",
+    "activity": {
+      "title": "Atividade Recente",
+      "description": "Um resumo das emissões e verificações recentes de emblemas",
+      "viewAll": "Ver Toda a Atividade",
+      "emptyState": {
+        "title": "Nenhuma atividade recente",
+        "description": "Suas atividades de emblemas aparecerão aqui"
+      }
+    },
+    "cards": {
+      "createBadge": {
+        "title": "Criar Emblema",
+        "description": "Projete e emita novos emblemas digitais para reconhecer conquistas",
+        "button": "Criar Novo Emblema"
+      },
+      "manageUsers": {
+        "title": "Gerenciar Usuários",
+        "description": "Visualize e gerencie usuários que podem receber e verificar emblemas",
+        "button": "Ver Todos os Usuários"
+      },
+      "verifyCredentials": {
+        "title": "Verificar Credenciais",
+        "description": "Verifique a autenticidade de emblemas e credenciais digitais",
+        "button": "Verificar Agora"
+      }
+    }
+  },
+  "dashboard": {
+    "badge": "Bem-vindo de Volta",
+    "title": "Painel",
+    "subtitle": "Visão geral das atividades de emblemas",
+    "cards": {
+      "createBadge": { "title": "Criar Emblema", "description": "Desenhe e emita novos emblemas digitais", "button": "Criar Novo Emblema" },
+      "manageUsers": { "title": "Gerenciar Usuários", "description": "Visualize e gerencie atribuições de usuários", "button": "Ver Todos os Usuários" },
+      "verifyCredentials": { "title": "Verificar Credenciais", "description": "Verifique a autenticidade dos emblemas", "button": "Verificar Agora" }
+    },
+    "activity": {
+      "title": "Atividade Recente",
+      "description": "Suas últimas emissões e verificações de emblemas",
+      "viewAll": "Ver Toda a Atividade",
+      "emptyState": { "title": "Nenhuma atividade recente", "description": "Suas ações recentes aparecerão aqui" }
+    },
+    "overview": {
+      "title": "Visão Geral do Painel",
+      "description": "Bem-vindo ao seu painel. Aqui você pode ver sua atividade e estatísticas principais de relance."
+    },
+    "stats": {
+      "title": "Suas Estatísticas",
+      "badgesIssued": "Emblemas Emitidos",
+      "registries": "Registros",
+      "verifications": "Verificações"
+    },
+    "leaderboard": {
+      "title": "Quadro de Líderes",
+      "emptyState": "O quadro de líderes estará disponível em breve.",
+      "columns": {
+        "rank": "Posição",
+        "user": "Usuário",
+        "badges": "Emblemas"
+      }
+    }
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "success": "Sucesso",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "create": "Criar",
+    "update": "Atualizar",
+    "submit": "Enviar",
+    "confirm": "Confirmar",
+    "yes": "Sim",
+    "no": "Não",
+    "close": "Fechar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "first": "Primeiro",
+    "last": "Último",
+    "actions": "Ações",
+    "details": "Detalhes",
+    "description": "Descrição",
+    "name": "Nome",
+    "email": "E-mail",
+    "date": "Data",
+    "status": "Status",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "pending": "Pendente",
+    "approved": "Aprovado",
+    "rejected": "Rejeitado",
+    "required": "Obrigatório",
+    "optional": "Opcional",
+    "back": "Voltar",
+    "continue": "Continuar",
+    "tryAgain": "Tentar Novamente"
+  },
+  "forms": {
+    "validation": {
+      "required": "Este campo é obrigatório",
+      "email": "E-mail inválido",
+      "minLength": "Deve ter pelo menos {min} caracteres",
+      "maxLength": "Deve ter no máximo {max} caracteres",
+      "pattern": "Formato inválido",
+      "numeric": "Deve ser um número",
+      "url": "URL inválida",
+      "date": "Data inválida",
+      "phoneNumber": "Número de telefone inválido"
+    },
+    "placeholders": {
+      "enterEmail": "Digite seu e-mail",
+      "enterPassword": "Digite sua senha",
+      "enterName": "Digite o nome",
+      "enterDescription": "Digite a descrição",
+      "searchPlaceholder": "Digite para pesquisar...",
+      "selectOption": "Selecione uma opção",
+      "uploadFile": "Carregar arquivo",
+      "dragDropFile": "Arraste e solte o arquivo aqui"
+    }
+  },
+  "messages": {
+    "success": {
+      "created": "Criado com sucesso",
+      "updated": "Atualizado com sucesso",
+      "deleted": "Excluído com sucesso",
+      "saved": "Salvo com sucesso",
+      "sent": "Enviado com sucesso",
+      "uploaded": "Carregado com sucesso",
+      "copied": "Copiado para a área de transferência",
+      "achievementCreated": "Conquista criada com sucesso!",
+      "achievementCreatedWithProfile": "Conquista criada com sucesso com perfil de emissor {profileType}!",
+      "badgeIssued": "Emblema emitido com sucesso!",
+      "profileCreated": "Perfil criado com sucesso!"
+    },
+    "error": {
+      "generic": "Ocorreu um erro inesperado",
+      "network": "Erro de conexão",
+      "notFound": "Não encontrado",
+      "unauthorized": "Acesso não autorizado",
+      "forbidden": "Acesso negado",
+      "validation": "Erro de validação",
+      "upload": "Erro ao carregar arquivo",
+      "fileTooLarge": "Arquivo muito grande",
+      "unsupportedFileType": "Tipo de arquivo não suportado",
+      "failedToCreate": "Falha ao criar",
+      "failedToCreateAchievement": "Falha ao criar conquista",
+      "failedToIssue": "Falha ao emitir",
+      "failedToLoad": "Falha ao carregar",
+      "failedToLoadAchievements": "Falha ao carregar conquistas",
+      "walletNotInitialized": "Carteira não inicializada",
+      "walletNotConnected": "Certifique-se de que sua carteira está conectada",
+      "profileRequired": "Crie seu perfil de emissor primeiro",
+      "failedToCheckProfile": "Falha ao verificar status do perfil"
+    },
+    "confirmation": {
+      "delete": "Tem certeza que deseja excluir?",
+      "unsavedChanges": "Você tem alterações não salvas. Deseja continuar?",
+      "logout": "Tem certeza que deseja sair?",
+      "cancel": "Tem certeza que deseja cancelar?"
+    }
+  },
+  "achievements": {
+    "title": "Conquistas",
+    "pageTitle": "Conquistas",
+    "pageDescription": "Crie e gerencie suas conquistas Open Badges",
+    "create": "Criar Conquista",
+    "edit": "Editar Conquista",
+    "delete": "Excluir Conquista",
+    "list": "Lista de Conquistas",
+    "details": "Detalhes da Conquista",
+    "searchPlaceholder": "Pesquisar conquistas...",
+    "noAchievements": "Nenhuma conquista criada",
+    "noResults": "Nenhuma conquista encontrada",
+    "noResultsDescription": "Nenhuma conquista corresponde a \"{searchQuery}\". Tente um termo de busca diferente.",
+    "getStartedDescription": "Crie sua primeira conquista para começar a emitir credenciais.",
+    "createButton": "Criar Conquista",
+    "createNew": "Criar Nova Conquista",
+    "createDescription": "Defina uma nova conquista que pode ser concedida como credencial.",
+    "issueCredential": "Emitir Credencial",
+    "viewDetails": "Ver Detalhes",
+    "criteria": "Critérios",
+    "issuer": "Emissor",
+    "category": "Categoria",
+    "tags": "Tags",
+    "image": "Imagem",
+    "earned": "Conquistado",
+    "notEarned": "Não Conquistado",
+    "earnedBy": "Conquistado por",
+    "issuedOn": "Emitido em",
+    "expiresOn": "Expira em",
+    "verification": "Verificação",
+    "verified": "Verificado",
+    "notVerified": "Não Verificado",
+    "form": {
+      "name": "Nome da Conquista",
+      "nameRequired": "Nome da Conquista *",
+      "description": "Descrição",
+      "descriptionRequired": "Descrição *",
+      "descriptionPlaceholder": "Uma descrição detalhada da conquista e o que ela representa",
+      "criteriaRequired": "Critérios da Conquista *",
+      "criteriaPlaceholder": "Descreva os critérios para conquistar esta conquista...",
+      "criteriaHelp": "Critérios claros que devem ser atendidos para conquistar esta conquista",
+      "criteriaUrl": "URL dos Critérios (Opcional)",
+      "criteriaUrlPlaceholder": "https://exemplo.com/criterios",
+      "criteriaUrlHelp": "URL opcional com informações adicionais sobre critérios",
+      "imageOptional": "Imagem da Conquista (Opcional)",
+      "imageUrl": "URL da Imagem",
+      "imageUrlPlaceholder": "https://exemplo.com/imagem.png",
+      "imageDescription": "URL de uma imagem que representa esta conquista (PNG, JPG, SVG)",
+      "tagsOptional": "Tags (Opcional)",
+      "tagsPlaceholder": "habilidade, certificação, aprendizagem",
+      "tagsDescription": "Tags separadas por vírgula para ajudar a categorizar esta conquista",
+      "createAchievement": "Criar Conquista",
+      "updateAchievement": "Atualizar Conquista",
+      "creating": "Criando",
+      "updating": "Atualizando"
+    }
+  },
+  "wallet": {
+    "connect": "Conectar Carteira",
+    "disconnect": "Desconectar Carteira",
+    "connected": "Conectado",
+    "notConnected": "Não Conectado",
+    "balance": "Saldo",
+    "address": "Endereço",
+    "network": "Rede",
+    "transaction": "Transação",
+    "transactions": "Transações",
+    "hash": "Hash",
+    "block": "Bloco",
+    "confirmations": "Confirmações",
+    "fee": "Taxa",
+    "pending": "Pendente",
+    "confirmed": "Confirmado",
+    "failed": "Falhado",
+    "mint": "Cunhar",
+    "burn": "Queimar",
+    "transfer": "Transferir",
+    "approve": "Aprovar",
+    "revoke": "Revogar",
+    "required": "Carteira Necessária",
+    "requiredDescription": "Você precisa conectar sua carteira para {action}.",
+    "signMessage": "Você precisará assinar uma mensagem para verificar a propriedade da carteira",
+    "actions": {
+      "manageProfile": "gerenciar seu perfil de emissor",
+      "createAchievement": "criar uma nova conquista",
+      "issueBadge": "emitir um emblema",
+      "createBadge": "criar um novo emblema",
+      "viewProfile": "visualizar seu perfil",
+      "performAction": "executar esta ação"
+    }
+  },
+  "profile": {
+    "title": "Perfil",
+    "issuer": "Emissor",
+    "issuerProfile": "Perfil do Emissor",
+    "issuerProfileRequired": "Perfil do Emissor Necessário",
+    "setupRequired": "Para emitir credenciais e criar conquistas, você precisa configurar seu perfil de emissor primeiro.",
+    "createProfile": "Criar Perfil",
+    "editProfile": "Editar Perfil",
+    "setupProfile": "Configurar Perfil",
+    "profileSetup": "Configuração do Perfil",
+    "name": "Nome",
+    "description": "Descrição",
+    "organization": "Organização",
+    "website": "Website",
+    "email": "E-mail",
+    "profileComplete": "Perfil completo",
+    "profileIncomplete": "Perfil incompleto",  
+    "setupInstructions": "Configure as informações do seu perfil de emissor para começar a criar e emitir credenciais.",
+    "required": "Obrigatório",
+    "optional": "Opcional",
+    "create": {
+      "title": "Criar Perfil de Emissor",
+      "subtitle": "Configure o perfil da sua organização para começar a emitir credenciais Open Badges v3.0",
+      "organizationInfo": "Informações da Organização",
+      "organizationInfoDescription": "Forneça detalhes sobre sua organização para emissão de credenciais",
+      "identityMethod": "Método de Identidade",
+      "didProfile": "Perfil DID Aprimorado (Recomendado)",
+      "didDescription": "Cria um identificador descentralizado (DID) para verificação aprimorada e interoperabilidade.",
+      "didFeatures": {
+        "verification": "Verificação aprimorada",
+        "futureProof": "Credenciais à prova de futuro",
+        "standard": "Padrão da indústria"
+      },
+      "simpleProfile": "Perfil Simples",
+      "simpleDescription": "Cria um perfil básico sem DID. Configuração mais rápida, mas recursos limitados.",
+      "simpleFeatures": {
+        "quickSetup": "Configuração rápida",
+        "lowerCosts": "Custos de transação menores"
+      },
+      "organizationName": "Nome da Organização",
+      "organizationNameRequired": "Nome da Organização *",
+      "organizationNamePlaceholder": "Nome da sua organização",
+      "organizationNameHelp": "Este será exibido como o emissor em todas as credenciais",
+      "descriptionLabel": "Descrição",
+      "descriptionPlaceholder": "Breve descrição da sua organização",
+      "websiteUrl": "URL do Website",
+      "websiteUrlPlaceholder": "https://seu-website.com",
+      "contactEmail": "E-mail de Contato",
+      "contactEmailPlaceholder": "contato@sua-organizacao.com",
+      "didAlert": "Perfil DID: Isso criará um identificador descentralizado (DID) para sua organização, fornecendo capacidades de verificação aprimoradas e melhor interoperabilidade com outros sistemas de credenciais.",
+      "simpleAlert": "Perfil Simples: Isso cria um perfil básico de emissor sem DID. Você pode atualizar para DID mais tarde, se necessário.",
+      "creating": "Criando...",
+      "createProfile": "Criar Perfil",
+      "back": "Voltar",
+      "cancel": "Cancelar",
+      "walletRequired": "Carteira Necessária",
+      "walletRequiredMessage": "Por favor, conecte sua carteira para criar um perfil de emissor.",
+      "existingProfile": "Você já tem um perfil {{profileType}}. Você pode atualizá-lo na página de perfil.",
+      "didSuccessTitle": "Perfil habilitado com DID criado com sucesso",
+      "didSuccessDescription": "Capacidades de verificação aprimoradas habilitadas. Endereço DID: {{didAddress}}...",
+      "simpleSuccessTitle": "Perfil simples criado com sucesso",
+      "simpleSuccessDescription": "Você pode atualizar para perfil habilitado com DID mais tarde, se necessário.",
+      "errorTitle": "Falha na criação do perfil",
+      "defaultError": "Falhou ao criar perfil"
+    }
+  },
+  "errors": {
+    "achievementNotFound": "Conquista não encontrada",
+    "achievementNotFoundDescription": "A conquista solicitada não pôde ser encontrada.",
+    "walletAndAchievementRequired": "Por favor, conecte sua carteira e certifique-se de que a conquista está carregada"
+  },
+  "layout": {
+    "appTitle": "Open Badges",
+    "footer": {
+      "copyright": "© 2024 Open Badges. <3",
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "documentation": "Documentação"
+    }
+  },
+  "validation": {
+    "title": "Validador de Emblemas",
+    "description": "Valide credenciais Open Badges 3.0 para garantir que atendam aos padrões de especificação e verifique suas assinaturas criptográficas.",
+    "tabs": {
+      "json": "Entrada JSON",
+      "url": "Entrada de URL",
+      "address": "Entrada de Endereço",
+      "signature": "Entrada de Assinatura"
+    },
+    "jsonTab": {
+      "title": "Validar JSON do Emblema",
+      "description": "Cole o JSON de uma credencial Open Badge ou carregue um arquivo JSON",
+      "placeholder": "Cole seu JSON Open Badges aqui...",
+      "uploadButton": "Carregar JSON",
+      "validateButton": "Validar Emblema",
+      "validating": "Validando..."
+    },
+    "urlTab": {
+      "title": "Validar Emblema a partir de URL",
+      "description": "Digite a URL de uma credencial Open Badge",
+      "label": "URL do Emblema",
+      "placeholder": "https://exemplo.com/emblema.json",
+      "fetchButton": "Buscar Emblema"
+    },
+    "addressTab": {
+      "title": "Buscar por Endereço Solana",
+      "description": "Digite uma chave pública Solana ou DID para encontrar dados de emblemas associados",
+      "label": "Endereço Solana ou DID",
+      "placeholder": "Digite chave pública Solana ou DID (did:sol:...)",
+      "searchButton": "Buscar"
+    },
+    "signatureTab": {
+      "title": "Buscar por Assinatura de Transação",
+      "description": "Digite uma assinatura de transação Solana para encontrar dados de emblemas",
+      "label": "Assinatura da Transação",
+      "placeholder": "Digite assinatura da transação Solana",
+      "searchButton": "Buscar Transação"
+    },
+    "results": {
+      "validTitle": "Credencial Válida",
+      "invalidTitle": "Credencial Inválida",
+      "complianceTitle": "Conformidade de Especificação e Verificação Criptográfica",
+      "complianceDescription": "Este validador verifica credenciais Open Badges 3.0 tanto em conformidade de especificação (validação) quanto em verificação criptográfica na blockchain (verificação).",
+      "checks": {
+        "jsonFormat": {
+          "title": "Formato JSON",
+          "description": "Estrutura válida de documento JSON (Validação)"
+        },
+        "context": {
+          "title": "Contexto OB3.0",
+          "description": "Contexto JSON-LD obrigatório presente (Validação)"
+        },
+        "credentialType": {
+          "title": "Tipo de Credencial",
+          "description": "Possui tipo 'OpenBadgeCredential' (Validação)"
+        },
+        "cryptographicProof": {
+          "title": "Prova Criptográfica",
+          "description": "Assinatura digital válida na blockchain (Verificação)"
+        },
+        "issuerOnChain": {
+          "title": "Emissor na Blockchain",
+          "description": "Emissor verificado na blockchain Solana (Verificação)"
+        },
+        "notRevoked": {
+          "title": "Não Revogado",
+          "description": "Credencial não revogada na blockchain (Verificação)"
+        },
+        "achievement": {
+          "title": "Dados da Conquista",
+          "description": "Estrutura de dados da conquista válida (Validação)"
+        }
+      }
+    },
+    "about": {
+      "title": "Sobre a Validação de Emblemas",
+      "description": "Este validador verifica credenciais Open Badges 3.0 contra os requisitos de especificação:",
+      "checks": [
+        "Verifica a estrutura JSON-LD e contextos obrigatórios",
+        "Valida se o tipo de credencial é 'OpenBadgeCredential'",
+        "Verifica informações adequadas do emissor",
+        "Verifica a assinatura criptográfica",
+        "Verifica a estrutura de dados da conquista",
+        "Verifica se o emblema não foi revogado"
+      ],
+      "important": {
+        "title": "Importante",
+        "description": "Este validador segue a especificação Open Badges 3.0 que é compatível com o Modelo de Dados de Credenciais Verificáveis do W3C."
+      }
+    },
+    "search": {
+      "noResults": "Nenhum resultado encontrado",
+      "loading": "Buscando...",
+      "error": "Erro na busca",
+      "profiles": "Perfis",
+      "achievements": "Conquistas",
+      "badges": "Emblemas",
+      "transaction": "Transação"
+    }
+  }
+}

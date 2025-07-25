@@ -1,0 +1,584 @@
+{
+  "app": {
+    "title": "Badge Protocol",
+    "shortTitle": "BP"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "registries": "Registries",
+    "badges": "Badges",
+    "validate": "Validate",
+    "users": "Users",
+    "profile": "Profile",
+    "docs": "Docs",
+    "achievements": "Achievements"
+  },
+  "badges": {
+    "title": "Badges",
+    "description": "Manage and issue digital badges to your community",
+    "createButton": "Create New Badge",
+    "searchPlaceholder": "Search badges...",
+    "noBadges": "No badges yet",
+    "noResults": "No badges found",
+    "noResultsDescription": "Try adjusting your search or filter to find what you're looking for.",
+    "createBadge": "Create Badge",
+    "viewDetails": "View Details",
+    "issuedBy": "Issued by",
+    "created": "Created",
+    "myBadges": "My Badges",
+    "loadingBadges": "Loading badges...",
+    "refreshBadges": "Refresh Badges",
+    "sortBy": "Sort by",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "sortAlphabetical": "Alphabetical",
+    "sortStatus": "Status",
+    "filterStatus": "Filter by Status",
+    "filterAll": "All",
+    "filterValid": "Valid",
+    "filterExpired": "Expired",
+    "filterRevoked": "Revoked",
+    "viewMode": "View Mode",
+    "gridView": "Grid",
+    "listView": "List",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters",
+    "downloadBadge": "Download Badge",
+    "shareBadge": "Share Badge",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link copied!",
+    "verified": "Verified",
+    "expired": "Expired",
+    "revoked": "Revoked",
+    "issued": "Issued",
+    "expires": "Expires",
+    "valid": "Valid",
+    "achievementCredential": "Achievement Credential",
+    "didValid": "DID: Valid",
+    "didLegacy": "DID: Legacy Format",
+    "badgeDid": "Badge DID",
+    "recipientDid": "Recipient DID",
+    "issuerDid": "Issuer DID",
+    "issuedDate": "Issued Date",
+    "expiresDate": "Expires Date",
+    "achievementDid": "Achievement DID",
+    "cryptographicProof": "Cryptographic Proof",
+    "proofType": "Type",
+    "proofPurpose": "Purpose",
+    "proofCreated": "Created",
+    "proof": "Proof",
+    "verifyBadge": "Verify Badge",
+    "viewJson": "View JSON",
+    "copyTooltip": "Copy to clipboard",
+    "achievementName": "Achievement Name",
+    "achievementDescription": "Achievement Description",
+    "issue": {
+      "backToAchievements": "Back to Achievements",
+      "achievementDetails": "Achievement Details",
+      "reviewAchievement": "Review the achievement you're about to issue",
+      "criteria": "Criteria",
+      "issueCredential": "Issue Credential",
+      "chooseSubjectMethod": "Choose the subject identification method and provide recipient details",
+      "subjectIdentificationMethod": "Subject Identification Method",
+      "subjectMethodDescription": "Choose how the recipient will be identified in the badge credential",
+      "simpleAddress": "Simple Address",
+      "simpleAddressDescription": "Use the Solana address directly as the subject identifier. Simpler and more efficient for basic use cases.",
+      "simpleFeatures": {
+        "noDid": "No DID creation required",
+        "lowerCosts": "Lower transaction costs"
+      },
+      "didBasedIdentification": "DID-based Identification",
+      "didBasedDescription": "Create or use an existing DID document for the recipient. Better for decentralized identity and enhanced verification.",
+      "didFeatures": {
+        "verification": "Enhanced verification",
+        "decentralizedIdentity": "Decentralized identity"
+      },
+      "recipientAddress": "Recipient Address",
+      "recipientAddressRequired": "Recipient Address *",
+      "recipientAddressPlaceholder": "Enter recipient's wallet address",
+      "simpleMethodNote": "Simple Method: The credential will be issued directly to the wallet address.",
+      "additionalNotes": "Additional Notes (Optional)",
+      "additionalNotesPlaceholder": "Add any additional information about this credential issuance...",
+      "simpleMethodDescription": "Simple Method: Issues the credential directly to the recipient's wallet address. This is the most efficient approach and works with any Solana wallet.",
+      "issueCredentialButton": "Issue Credential"
+    }
+  },
+  "users": {
+    "title": "Users",
+    "description": "Manage users and their badge assignments",
+    "inviteButton": "Invite User",
+    "searchPlaceholder": "Search users...",
+    "noUsers": "No users yet",
+    "noResults": "No users found",
+    "noResultsDescription": "Try adjusting your search or filter to find what you're looking for.",
+    "getStartedDescription": "Get started by inviting your first user.",
+    "inviteUser": "Invite User",
+    "viewProfile": "View Profile",
+    "badgesCount": "{count} Badge | {count} Badges",
+    "joined": "Joined"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "home": {
+    "badge": "Now with Solana Wallet Integration",
+    "title": "Welcome to Badge Protocol",
+    "subtitle": "Issue, manage, and verify digital credentials on the Solana blockchain",
+    "getStarted": "Get Started",
+    "activity": {
+      "title": "Recent Activity",
+      "description": "A summary of recent badge issuances and verifications",
+      "viewAll": "View All Activity",
+      "emptyState": {
+        "title": "No recent activity",
+        "description": "Your badge activities will appear here"
+      }
+    },
+    "cards": {
+      "createBadge": {
+        "title": "Create Badge",
+        "description": "Design and issue new digital badges to recognize achievements",
+        "button": "Create New Badge"
+      },
+      "manageUsers": {
+        "title": "Manage Users",
+        "description": "View and manage users who can receive and verify badges",
+        "button": "View All Users"
+      },
+      "verifyCredentials": {
+        "title": "Verify Credentials",
+        "description": "Verify the authenticity of digital badges and credentials",
+        "button": "Verify Now"
+      }
+    }
+  },
+  "dashboard": {
+    "badge": "Welcome Back",
+    "title": "Dashboard",
+    "subtitle": "Overview of your badge activities",
+    "overview": {
+      "title": "Dashboard Overview",
+      "description": "Welcome to your dashboard. Here you can view your activity and key statistics at a glance."
+    },
+    "stats": {
+      "title": "Your Stats",
+      "badgesIssued": "Badges Issued",
+      "registries": "Registries",
+      "verifications": "Verifications"
+    },
+    "cards": {
+      "createBadge": {
+        "title": "Create Badge",
+        "description": "Design and issue new digital badges",
+        "button": "Create New Badge"
+      },
+      "manageUsers": {
+        "title": "Manage Users",
+        "description": "View and manage user assignments",
+        "button": "View All Users"
+      },
+      "verifyCredentials": {
+        "title": "Verify Credentials",
+        "description": "Verify the authenticity of badges",
+        "button": "Verify Now"
+      }
+    },
+    "activity": {
+      "title": "Recent Activity",
+      "description": "Your latest badge issuances and verifications",
+      "viewAll": "View All Activity",
+      "emptyState": {
+        "title": "No recent activity",
+        "description": "Your recent actions will appear here"
+      }
+    },
+    "leaderboard": {
+      "title": "Leaderboard",
+      "emptyState": "Leaderboard will be available soon.",
+      "columns": {
+        "rank": "Rank",
+        "user": "User",
+        "badges": "Badges"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "next": "Next",
+    "previous": "Previous",
+    "first": "First",
+    "last": "Last",
+    "actions": "Actions",
+    "details": "Details",
+    "description": "Description",
+    "name": "Name",
+    "email": "Email",
+    "date": "Date",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "required": "Required",
+    "optional": "Optional",
+    "back": "Back",
+    "continue": "Continue",
+    "tryAgain": "Try Again"
+  },
+  "forms": {
+    "validation": {
+      "required": "This field is required",
+      "email": "Invalid email",
+      "minLength": "Must be at least {min} characters",
+      "maxLength": "Must be at most {max} characters",
+      "pattern": "Invalid format",
+      "numeric": "Must be a number",
+      "url": "Invalid URL",
+      "date": "Invalid date",
+      "phoneNumber": "Invalid phone number"
+    },
+    "placeholders": {
+      "enterEmail": "Enter your email",
+      "enterPassword": "Enter your password",
+      "enterName": "Enter name",
+      "enterDescription": "Enter description",
+      "searchPlaceholder": "Type to search...",
+      "selectOption": "Select an option",
+      "uploadFile": "Upload file",
+      "dragDropFile": "Drag and drop file here"
+    }
+  },
+  "messages": {
+    "success": {
+      "created": "Created successfully",
+      "updated": "Updated successfully",
+      "deleted": "Deleted successfully",
+      "saved": "Saved successfully",
+      "sent": "Sent successfully",
+      "uploaded": "Uploaded successfully",
+      "copied": "Copied to clipboard",
+      "achievementCreated": "Achievement created successfully!",
+      "achievementCreatedWithProfile": "Achievement created successfully with {profileType} issuer profile!",
+      "badgeIssued": "Badge issued successfully!",
+      "profileCreated": "Profile created successfully!"
+    },
+    "error": {
+      "generic": "An unexpected error occurred",
+      "network": "Connection error",
+      "notFound": "Not found",
+      "unauthorized": "Unauthorized access",
+      "forbidden": "Access denied",
+      "validation": "Validation error",
+      "upload": "Upload error",
+      "fileTooLarge": "File too large",
+      "unsupportedFileType": "Unsupported file type",
+      "failedToCreate": "Failed to create",
+      "failedToCreateAchievement": "Failed to create achievement",
+      "failedToIssue": "Failed to issue",
+      "failedToLoad": "Failed to load",
+      "failedToLoadAchievements": "Failed to load achievements",
+      "walletNotInitialized": "Wallet not initialized",
+      "walletNotConnected": "Please ensure your wallet is connected",
+      "profileRequired": "Please create your issuer profile first",
+      "failedToCheckProfile": "Failed to check profile status"
+    },
+    "confirmation": {
+      "delete": "Are you sure you want to delete?",
+      "unsavedChanges": "You have unsaved changes. Do you want to continue?",
+      "logout": "Are you sure you want to logout?",
+      "cancel": "Are you sure you want to cancel?"
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "pageTitle": "Achievements", 
+    "pageDescription": "Create and manage your Open Badges achievements",
+    "create": "Create Achievement",
+    "edit": "Edit Achievement",
+    "delete": "Delete Achievement",
+    "list": "Achievement List",
+    "details": "Achievement Details",
+    "searchPlaceholder": "Search achievements...",
+    "noAchievements": "No achievements created",
+    "noResults": "No achievements found",
+    "noResultsDescription": "No achievements match \"{searchQuery}\". Try a different search term.",
+    "getStartedDescription": "Create your first achievement to start issuing credentials.",
+    "createButton": "Create Achievement",
+    "createNew": "Create New Achievement",
+    "createDescription": "Define a new achievement that can be awarded as credentials.",
+    "issueCredential": "Issue Credential",
+    "viewDetails": "View Details",
+    "criteria": "Criteria",
+    "issuer": "Issuer",
+    "category": "Category",
+    "tags": "Tags",
+    "image": "Image",
+    "earned": "Earned",
+    "notEarned": "Not Earned",
+    "earnedBy": "Earned by",
+    "issuedOn": "Issued on",
+    "expiresOn": "Expires on",
+    "verification": "Verification",
+    "verified": "Verified",
+    "notVerified": "Not Verified",
+    "form": {
+      "name": "Achievement Name",
+      "nameRequired": "Achievement Name *",
+      "description": "Description",
+      "descriptionRequired": "Description *",
+      "descriptionPlaceholder": "A detailed description of the achievement and what it represents",
+      "criteriaRequired": "Achievement Criteria *",
+      "criteriaPlaceholder": "Describe the criteria for earning this achievement...",
+      "criteriaHelp": "Clear criteria that must be met to earn this achievement",
+      "criteriaUrl": "Criteria URL (Optional)",
+      "criteriaUrlPlaceholder": "https://example.com/criteria",
+      "criteriaUrlHelp": "Optional URL with additional criteria information",
+      "imageOptional": "Achievement Image (Optional)",
+      "imageUrl": "Image URL",
+      "imageUrlPlaceholder": "https://example.com/image.png",
+      "imageDescription": "URL to an image representing this achievement (PNG, JPG, SVG)",
+      "tagsOptional": "Tags (Optional)",
+      "tagsPlaceholder": "skill, certification, learning",
+      "tagsDescription": "Comma-separated tags to help categorize this achievement",
+      "createAchievement": "Create Achievement",
+      "updateAchievement": "Update Achievement",
+      "creating": "Creating",
+      "updating": "Updating"
+    }
+  },
+  "wallet": {
+    "connect": "Connect Wallet",
+    "disconnect": "Disconnect Wallet",
+    "connected": "Connected",
+    "notConnected": "Not Connected",
+    "balance": "Balance",
+    "address": "Address",
+    "network": "Network",
+    "transaction": "Transaction",
+    "transactions": "Transactions",
+    "hash": "Hash",
+    "block": "Block",
+    "confirmations": "Confirmations",
+    "fee": "Fee",
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "failed": "Failed",
+    "mint": "Mint",
+    "burn": "Burn",
+    "transfer": "Transfer",
+    "approve": "Approve",
+    "revoke": "Revoke",
+    "required": "Wallet Required",
+    "requiredDescription": "You need to connect your wallet to {action}.",
+    "signMessage": "You'll need to sign a message to verify wallet ownership",
+    "actions": {
+      "manageProfile": "manage your issuer profile",
+      "createAchievement": "create a new achievement",
+      "issueBadge": "issue a badge",
+      "createBadge": "create a new badge",
+      "viewProfile": "view your profile",
+      "performAction": "perform this action"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "issuer": "Issuer", 
+    "issuerProfile": "Issuer Profile",
+    "issuerProfileRequired": "Issuer Profile Required",
+    "setupRequired": "To issue credentials and create achievements, you need to set up your issuer profile first.",
+    "createProfile": "Create Profile",
+    "editProfile": "Edit Profile",
+    "setupProfile": "Setup Profile",
+    "profileSetup": "Profile Setup",
+    "name": "Name",
+    "description": "Description",
+    "organization": "Organization",
+    "website": "Website",
+    "email": "Email",
+    "profileComplete": "Profile complete",
+    "profileIncomplete": "Profile incomplete",
+    "setupInstructions": "Set up your issuer profile information to start creating and issuing credentials.",
+    "required": "Required",
+    "optional": "Optional",
+    "create": {
+      "title": "Create Issuer Profile",
+      "subtitle": "Set up your organization profile to start issuing Open Badges v3.0 credentials",
+      "organizationInfo": "Organization Information",
+      "organizationInfoDescription": "Provide details about your organization for credential issuance",
+      "identityMethod": "Identity Method",
+      "didProfile": "Enhanced DID Profile (Recommended)",
+      "didDescription": "Creates a decentralized identifier (DID) for enhanced verification and interoperability.",
+      "didFeatures": {
+        "verification": "Enhanced verification",
+        "futureProof": "Future-proof credentials",
+        "standard": "Industry standard"
+      },
+      "simpleProfile": "Simple Profile",
+      "simpleDescription": "Creates a basic profile without DID. Faster setup but limited features.",
+      "simpleFeatures": {
+        "quickSetup": "Quick setup",
+        "lowerCosts": "Lower transaction costs"
+      },
+      "organizationName": "Organization Name",
+      "organizationNameRequired": "Organization Name *",
+      "organizationNamePlaceholder": "Your organization name",
+      "organizationNameHelp": "This will be displayed as the issuer on all credentials",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Brief description of your organization",
+      "websiteUrl": "Website URL",
+      "websiteUrlPlaceholder": "https://your-website.com",
+      "contactEmail": "Contact Email",
+      "contactEmailPlaceholder": "contact@your-organization.com",
+      "didAlert": "DID Profile: This will create a decentralized identifier (DID) for your organization, providing enhanced verification capabilities and better interoperability with other credential systems.",
+      "simpleAlert": "Simple Profile: This creates a basic issuer profile without DID. You can upgrade to DID later if needed.",
+      "creating": "Creating...",
+      "createProfile": "Create Profile",
+      "back": "Back",
+      "cancel": "Cancel",
+      "walletRequired": "Wallet Required",
+      "walletRequiredMessage": "Please connect your wallet to create an issuer profile.",
+      "existingProfile": "You already have a {{profileType}} profile. You can update it from the profile page.",
+      "didSuccessTitle": "DID-enabled profile created successfully",
+      "didSuccessDescription": "Enhanced verification capabilities enabled. DID Address: {{didAddress}}...",
+      "simpleSuccessTitle": "Simple profile created successfully",
+      "simpleSuccessDescription": "You can upgrade to DID-enabled profile later if needed.",
+      "errorTitle": "Profile creation failed",
+      "defaultError": "Failed to create profile"
+    }
+  },
+  "errors": {
+    "achievementNotFound": "Achievement not found",
+    "achievementNotFoundDescription": "The requested achievement could not be found.",
+    "walletAndAchievementRequired": "Please connect your wallet and ensure achievement is loaded"
+  },
+  "layout": {
+    "appTitle": "Open Badges",
+    "footer": {
+      "copyright": "© 2024 Open Badges. Powered by Solana blockchain.",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "documentation": "Documentation"
+    }
+  },
+  "validation": {
+    "title": "Badge Validator",
+    "description": "Validate Open Badges 3.0 credentials to ensure they meet the specification standards and verify their cryptographic signatures.",
+    "tabs": {
+      "json": "JSON Input",
+      "url": "URL Input",
+      "address": "Address Input",
+      "signature": "Signature Input"
+    },
+    "jsonTab": {
+      "title": "Validate Badge JSON",
+      "description": "Paste the JSON of an Open Badge credential or upload a JSON file",
+      "placeholder": "Paste your Open Badges JSON here...",
+      "uploadButton": "Upload JSON",
+      "validateButton": "Validate Badge",
+      "validating": "Validating..."
+    },
+    "urlTab": {
+      "title": "Validate Badge from URL",
+      "description": "Enter the URL of an Open Badge credential",
+      "label": "Badge URL",
+      "placeholder": "https://example.com/badge.json",
+      "fetchButton": "Fetch Badge"
+    },
+    "addressTab": {
+      "title": "Search by Solana Address",
+      "description": "Enter a Solana public key or DID to find associated badge data",
+      "label": "Solana Address or DID",
+      "placeholder": "Enter Solana public key or DID (did:sol:...)",
+      "searchButton": "Search"
+    },
+    "signatureTab": {
+      "title": "Search by Transaction Signature",
+      "description": "Enter a Solana transaction signature to find badge data",
+      "label": "Transaction Signature",
+      "placeholder": "Enter Solana transaction signature",
+      "searchButton": "Search Transaction"
+    },
+    "results": {
+      "validTitle": "Valid Credential",
+      "invalidTitle": "Invalid Credential",
+      "complianceTitle": "Specification Compliance & Cryptographic Verification",
+      "complianceDescription": "This validator checks Open Badges 3.0 credentials against both specification compliance (validation) and cryptographic verification on-chain (verification).",
+      "checks": {
+        "jsonFormat": {
+          "title": "JSON Format",
+          "description": "Valid JSON document structure (Validation)"
+        },
+        "context": {
+          "title": "OB3.0 Context",
+          "description": "Required JSON-LD context present (Validation)"
+        },
+        "credentialType": {
+          "title": "Credential Type",
+          "description": "Has 'OpenBadgeCredential' type (Validation)"
+        },
+        "cryptographicProof": {
+          "title": "Cryptographic Proof",
+          "description": "Valid digital signature on-chain (Verification)"
+        },
+        "issuerOnChain": {
+          "title": "Issuer On-Chain",
+          "description": "Issuer verified on Solana blockchain (Verification)"
+        },
+        "notRevoked": {
+          "title": "Not Revoked",
+          "description": "Credential not revoked on-chain (Verification)"
+        },
+        "achievement": {
+          "title": "Achievement Data",
+          "description": "Valid achievement data structure (Validation)"
+        }
+      }
+    },
+    "about": {
+      "title": "About Badge Validation",
+      "description": "This validator checks Open Badges 3.0 credentials against the specification requirements:",
+      "checks": [
+        "Verifies the JSON-LD structure and required contexts",
+        "Validates the credential type is 'OpenBadgeCredential'",
+        "Checks for proper issuer information",
+        "Verifies the cryptographic signature",
+        "Checks the achievement data structure",
+        "Verifies the badge has not been revoked"
+      ],
+      "important": {
+        "title": "Important",
+        "description": "This validator follows the Open Badges 3.0 specification which is compatible with the W3C Verifiable Credentials Data Model."
+      }
+    },
+    "search": {
+      "noResults": "No results found",
+      "loading": "Searching...",
+      "error": "Search error",
+      "profiles": "Profiles",
+      "achievements": "Achievements",
+      "badges": "Badges",
+      "transaction": "Transaction"
+    }
+  }
+}

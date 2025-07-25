@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://purl.imsglobal.org/spec/ob/v3p0/schema/json/achievement_3p0.json",
+  "title": "Achievement",
+  "description": "A schema for Open Badges 3.0 Achievement objects",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1,
+      "description": "JSON-LD context array"
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique identifier for the achievement"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "const": "Achievement"
+      },
+      "description": "Type of the object, must include 'Achievement'"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name or title of the achievement"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the achievement"
+    },
+    "criteria": {
+      "type": "object",
+      "properties": {
+        "narrative": {
+          "type": "string",
+          "description": "Narrative description of what is needed to earn the achievement"
+        },
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI to a page describing the criteria"
+        }
+      },
+      "required": ["narrative"],
+      "description": "Criteria for earning the achievement"
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI to the image representing the achievement"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the image"
+        }
+      },
+      "required": ["id"],
+      "description": "Image representing the achievement"
+    },
+    "creator": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI identifying the creator"
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Type of the creator"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the creator"
+        }
+      },
+      "required": ["id"],
+      "description": "Creator of the achievement definition"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags associated with the achievement"
+    },
+    "alignment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "targetName": {
+            "type": "string",
+            "description": "Name of the aligned standard"
+          },
+          "targetUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the aligned standard"
+          },
+          "targetDescription": {
+            "type": "string",
+            "description": "Description of the aligned standard"
+          },
+          "targetFramework": {
+            "type": "string",
+            "description": "Framework the standard belongs to"
+          },
+          "targetCode": {
+            "type": "string",
+            "description": "Code or identifier for the standard within the framework"
+          }
+        },
+        "required": ["targetName", "targetUrl"],
+        "description": "An alignment to an educational standard"
+      },
+      "description": "Alignments to educational standards"
+    },
+    "achievementType": {
+      "type": "string",
+      "description": "Type of achievement (e.g., Badge, Certificate, Diploma)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the achievement"
+    },
+    "endorsement": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI identifying the endorsement"
+          },
+          "type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "Endorsement"
+            },
+            "description": "Type of the endorsement"
+          }
+        },
+        "required": ["id", "type"],
+        "description": "An endorsement of the achievement"
+      },
+      "description": "Endorsements of the achievement"
+    },
+    "creditsAvailable": {
+      "type": "number",
+      "description": "Credits available for earning the achievement"
+    }
+  },
+  "required": ["@context", "id", "type", "name", "description", "criteria"],
+  "additionalProperties": true
+} 

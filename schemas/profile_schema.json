@@ -1,0 +1,216 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://purl.imsglobal.org/spec/ob/v3p0/schema/json/profile_3p0.json",
+  "title": "Profile",
+  "description": "A schema for Open Badges 3.0 Profile objects",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "JSON-LD context array"
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "Unique identifier for the profile"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "const": "Profile"
+      },
+      "description": "Type of the object, must include 'Profile'"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the entity"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the entity"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the entity's website"
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI to the image representing the entity"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the image"
+        }
+      },
+      "required": ["id"],
+      "description": "Image representing the entity"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the entity"
+    },
+    "telephone": {
+      "type": "string",
+      "description": "Telephone number of the entity"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Type of the address"
+        },
+        "streetAddress": {
+          "type": "string",
+          "description": "Street address"
+        },
+        "addressLocality": {
+          "type": "string",
+          "description": "City or locality"
+        },
+        "addressRegion": {
+          "type": "string",
+          "description": "State, province, or region"
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "Postal code"
+        },
+        "addressCountry": {
+          "type": "string",
+          "description": "Country"
+        }
+      },
+      "description": "Physical address of the entity"
+    },
+    "parentOrg": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI identifying the parent organization"
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Type of the parent organization"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the parent organization"
+        }
+      },
+      "required": ["id"],
+      "description": "Parent organization of the entity"
+    },
+    "endorsement": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI identifying the endorsement"
+          },
+          "type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "Endorsement"
+            },
+            "description": "Type of the endorsement"
+          }
+        },
+        "required": ["id", "type"],
+        "description": "An endorsement of the profile"
+      },
+      "description": "Endorsements of the profile"
+    },
+    "sameAs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "URLs of other web pages about the same entity"
+    },
+    "contactPoint": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type of the contact point"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the contact point"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Email address of the contact point"
+          },
+          "telephone": {
+            "type": "string",
+            "description": "Telephone number of the contact point"
+          },
+          "contactType": {
+            "type": "string",
+            "description": "Type of contact"
+          }
+        },
+        "required": ["email"],
+        "description": "A contact point for the entity"
+      },
+      "description": "Contact points for the entity"
+    },
+    "publicKey": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI identifying the public key"
+          },
+          "owner": {
+            "type": "string",
+            "format": "uri",
+            "description": "URI identifying the owner of the key"
+          },
+          "publicKeyPem": {
+            "type": "string",
+            "description": "Public key in PEM format"
+          }
+        },
+        "required": ["id", "owner"],
+        "description": "A public key associated with the entity"
+      },
+      "description": "Public keys associated with the entity"
+    }
+  },
+  "required": ["id", "type"],
+  "additionalProperties": true
+} 

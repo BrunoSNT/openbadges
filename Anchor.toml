@@ -1,0 +1,38 @@
+[toolchain]
+anchor_version = "0.31.1"
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+learning_record_manager = "HNFn338NnkwEWp6Aia8NHb92qwmqdLthNw1NCGBtzMYK"
+learning_record_store = "2aK8hoo872Zf7a7HWA1soQmF8VueCqAjiGHw2sHXQ2iK"
+open_badges = "6x9DvPXzw8RQimtZzATScuNxnPiYJxRTnnEaK4YmS2o8"
+personal_data_store = "6Q1WP8bXbkjpFPJR9K3MJQ8CA3AMWYULA3zSTEzgKFd2"
+sol_did = "CN7hHnABU21savvQvz7sZsfpgfAKm8sFd3XxocPP9AuH"
+
+[programs.devnet]
+open_badges = "FFQUgGaWxQFGnCe3VBmRZ259wtWHxjkpCqePouiyfzH5"
+sol_did = "CN7hHnABU21savvQvz7sZsfpgfAKm8sFd3XxocPP9AuH"
+
+[programs.mainnet]
+learning_record_manager = "7H6vofKcBVDnQ2ntXyV6ibYBtiHijvBqbfbuN5mAFem5"
+learning_record_store = "58L5WkHwuhxsJDLtYM2MtMVDDpEML2CGNRJy79mX1Fpm"
+open_badges = "6x9DvPXzw8RQimtZzATScuNxnPiYJxRTnnEaK4YmS2o8"
+personal_data_store = "HqNYNypGq68Nk3Td7vtSTgufLdYDLMd4iXiKDFxUaaLz"
+sol_did = "CN7hHnABU21savvQvz7sZsfpgfAKm8sFd3XxocPP9AuH"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "https://devnet.helius-rpc.com/?api-key=9956fdea-9608-4dda-9a35-46b60acd303f"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+cli = "./cli.sh"
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+main = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/main.test.ts"
+decentralized_learning = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/decentralized_learning.test.ts"
