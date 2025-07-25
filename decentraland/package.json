@@ -4,7 +4,7 @@
   "description": "SDK7 Template scene",
   "scripts": {
     "start": "sdk-commands start -p 8050",
-    "deploy": "sdk-commands deploy",
+    "deploy": "sdk-commands deploy -p 8050",
     "build": "sdk-commands build",
     "upgrade-sdk": "npm install --save-dev @dcl/sdk@latest",
     "upgrade-sdk:next": "npm install --save-dev @dcl/sdk@next"
