@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Badges Decentraland Scene</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #dcl-canvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ff88;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            z-index: 1000;
+        }
+        .loading.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <h2>🎯 Loading Open Badges Scene...</h2>
+        <p>Initializing NPCs and Solana wallet...</p>
+    </div>
+    
+    <canvas id="dcl-canvas"></canvas>
+    
+    <script>
+        // Configuration for Decentraland scene
+        window.DCL_CONFIG = {
+            scene: {
+                main: "bin/index.js",
+                scene: "scene.json"
+            },
+            position: { x: 11, y: 12 },
+            realm: "LocalPreview",
+            // WebGL compatibility settings
+            webgl: {
+                forceWebGL1: true,
+                disableShadows: true,
+                disableAntialiasing: true,
+                lowQuality: true
+            }
+        };
+        
+        // Parse URL parameters for position and settings
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('position')) {
+            const [x, y] = urlParams.get('position').split(',').map(Number);
+            window.DCL_CONFIG.position = { x, y };
+        }
+        
+        // Apply WebGL compatibility settings from URL
+        if (urlParams.get('FORCE_WEBGL1') === 'true') {
+            window.DCL_CONFIG.webgl.forceWebGL1 = true;
+        }
+        if (urlParams.get('DISABLE_SHADOWS') === 'true') {
+            window.DCL_CONFIG.webgl.disableShadows = true;
+        }
+        if (urlParams.get('DISABLE_ANTIALIASING') === 'true') {
+            window.DCL_CONFIG.webgl.disableAntialiasing = true;
+        }
+        if (urlParams.get('LOW_QUALITY') === 'true') {
+            window.DCL_CONFIG.webgl.lowQuality = true;
+        }
+        
+        console.log('🎮 DCL Config:', window.DCL_CONFIG);
+        
+        // Hide loading screen after scene loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                if (loading) {
+                    loading.classList.add('hidden');
+                }
+            }, 3000);
+        });
+        
+        // Add console helpers
+        console.log('🔐 Wallet Commands Available:');
+        console.log('  - getUserMnemonic(): Get current wallet mnemonic');
+        console.log('  - regenerateWallet(): Generate new wallet');
+        console.log('  - clearWallet(): Clear wallet data');
+        console.log('🎯 Scene: Open Badges with NPCs (Cat, Robot, Computer)');
+    </script>
+    
+    <!-- Load the Decentraland scene -->
+    <script src="bin/index.js"></script>
+</body>
+</html>
