@@ -6,6 +6,7 @@
     "start": "sdk-commands start -p 8050 --host 0.0.0.0",
     "start:external": "sdk-commands start -p 8050 --host 0.0.0.0 --ci --no-browser",
     "start:remote": "./start-remote.sh",
+    "start:proxy": "node proxy-server.js",
     "start:tunnel": "sdk-commands start -p 8050 --host localhost",
     "deploy": "sdk-commands deploy -p 8050",
     "build": "sdk-commands build",
@@ -39,8 +40,10 @@
     "@solana/wallet-adapter-phantom": "^0.9.24",
     "@solana/web3.js": "^1.95.2",
     "bs58": "^5.0.0",
+    "cors": "^2.8.5",
     "dcl-npc-toolkit": "^1.5.0",
     "eth-connect": "^6.2.4",
+    "express": "^4.18.2",
     "openmeteo": "^1.1.4",
     "tweetnacl": "^1.0.3",
     "tweetnacl-util": "^0.15.1"

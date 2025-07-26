@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=">
-    <title>Redirecting to Decentraland Scene...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Badges Decentraland Scene</title>
     <style>
         body {
             margin: 0;
@@ -24,24 +24,93 @@
             50% { opacity: 1; }
             100% { opacity: 0.5; }
         }
+        .options {
+            margin: 20px 0;
+        }
+        .option-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #333;
+            color: #00ff88;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #555;
+        }
+        .option-btn:hover {
+            background: #00ff88;
+            color: #000;
+        }
     </style>
-    <script src="webgl-suppression.js"></script>
 </head>
 <body>
     <div class="loading">
-        <h2>🎯 Loading Open Badges Decentraland Scene...</h2>
-        <p>Redirecting with WebGL1 compatibility settings...</p>
-        <p><small>If not redirected automatically, <a href="?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=" style="color: #00ff88;">click here</a></small></p>
+        <h2>🎯 Open Badges Decentraland Scene</h2>
+        <p>Choose your access method:</p>
+        
+        <div class="options">
+            <a href="?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=&realm=LocalPreview" 
+               class="option-btn">🌐 Remote Access (WebGL1)</a>
+            
+            <a href="?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_ADDRESSABLES=true&DISABLE_ASSET_BUNDLES=true" 
+               class="option-btn">🔧 Compatibility Mode</a>
+        </div>
+        
+        <p><small>If the scene doesn't load, try the SSH tunnel method:</small></p>
+        <code style="color: #666; font-size: 12px;">ssh -L 8050:localhost:8050 -p 13508 sanguinetti@164.41.20.252</code>
     </div>
     
     <script>
-        console.log('🚀 Auto-redirecting to compatible scene URL...');
-        // Fallback redirect in case meta refresh doesn't work
-        setTimeout(() => {
-            if (window.location.search === '') {
-                window.location.href = '?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=';
-            }
-        }, 2000);
+        // Network compatibility fixes
+        console.log('� Applying network compatibility fixes...');
+        
+        // Override fetch to handle CORS issues
+        const originalFetch = window.fetch;
+        window.fetch = function(url, options = {}) {
+            // Add CORS headers for Unity requests
+            options.mode = options.mode || 'cors';
+            options.credentials = options.credentials || 'omit';
+            
+            console.log('🌐 Fetch request:', url, options);
+            return originalFetch(url, options).catch(error => {
+                console.warn('🚨 Fetch failed, retrying with no-cors:', url);
+                return originalFetch(url, { ...options, mode: 'no-cors' });
+            });
+        };
+        
+        // Override XMLHttpRequest for Unity compatibility
+        const originalXHR = window.XMLHttpRequest;
+        window.XMLHttpRequest = function() {
+            const xhr = new originalXHR();
+            const originalOpen = xhr.open;
+            
+            xhr.open = function(method, url, async, user, password) {
+                console.log('📡 XHR request:', method, url);
+                
+                // Apply CORS headers
+                const result = originalOpen.call(this, method, url, async, user, password);
+                
+                // Set timeout to prevent infinite loops
+                xhr.timeout = 30000;
+                
+                return result;
+            };
+            
+            return xhr;
+        };
+        
+        // Detect if we need to redirect for compatibility
+        const currentUrl = window.location.href;
+        const hasCompatibilityParams = currentUrl.includes('FORCE_WEBGL1=true');
+        
+        if (!hasCompatibilityParams && window.location.search === '') {
+            console.log('🔄 Auto-redirecting to compatibility mode...');
+            setTimeout(() => {
+                window.location.href = '?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_ADDRESSABLES=true&DISABLE_ASSET_BUNDLES=true&realm=LocalPreview';
+            }, 3000);
+        }
+        
+        console.log('✅ Network compatibility layer loaded');
     </script>
 </body>
 </html>
