@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=">
+    <title>Redirecting to Decentraland Scene...</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            color: #00ff88;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .loading {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+    </style>
+    <script src="webgl-suppression.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <h2>🎯 Loading Open Badges Decentraland Scene...</h2>
+        <p>Redirecting with WebGL1 compatibility settings...</p>
+        <p><small>If not redirected automatically, <a href="?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=" style="color: #00ff88;">click here</a></small></p>
+    </div>
+    
+    <script>
+        console.log('🚀 Auto-redirecting to compatible scene URL...');
+        // Fallback redirect in case meta refresh doesn't work
+        setTimeout(() => {
+            if (window.location.search === '') {
+                window.location.href = '?position=11%2C12&FORCE_WEBGL1=true&DISABLE_SHADOWS=true&DISABLE_ANTIALIASING=true&LOW_QUALITY=true&DISABLE_backpack_editor_v2=&ENABLE_backpack_editor_v1=&SCENE_DEBUG_PANEL=';
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
